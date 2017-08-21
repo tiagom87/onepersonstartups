@@ -56,3 +56,9 @@ gem 'bootstrap', '~> 4.0.0.beta'
 
 gem 'devise'
 
+gem 'activeadmin'
+
+
+gem 'cancan' 
+gem 'draper'
+gem 'pundit'
