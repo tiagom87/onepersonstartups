@@ -10,4 +10,6 @@
 
 class Category < ApplicationRecord
 	has_many :startups
+
+	validates :name, presence: true
 end
