@@ -62,3 +62,5 @@ gem 'activeadmin'
 gem 'cancan' 
 gem 'draper'
 gem 'pundit'
+gem 'annotate', require: false
+
