@@ -1,0 +1,19 @@
+Architecture
+
+Models:
+** Startup **
+
+name:string
+hollywood:string
+logo_url:string
+creator_name:string
+creator_email:string
+source_name:string
+source_url:string
+revenue:integer
+startup_url:string
+state:string, default: "pending"
+
+** Category **
+
+name:string

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hollywood: MyString
+  logo_url: MyString
+  creator_name: MyString
+  creator_email: MyString
+  source_name: MyString
+  source_url: MyString
+  revenue: 1
+  startup_url: MyString
+  state: MyString
+
+two:
+  name: MyString
+  hollywood: MyString
+  logo_url: MyString
+  creator_name: MyString
+  creator_email: MyString
+  source_name: MyString
+  source_url: MyString
+  revenue: 1
+  startup_url: MyString
+  state: MyString
