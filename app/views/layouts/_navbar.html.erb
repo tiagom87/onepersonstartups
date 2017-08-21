@@ -1,0 +1,23 @@
+   <!-- Topbar -->
+    <nav class="topbar topbar-expand-md topbar-sticky">
+      <div class="container">
+        
+        <div class="topbar-left">
+          <button class="topbar-toggler">&#9776;</button>
+          <%= link_to root_path, class: "topbar-brand" do %>
+          	<%= image_tag "template/logo.png", class: "logo-default", alt: "logo" %>
+          	<%= image_tag "template/logo-light.png", class: "logo-inverse", alt: "logo" %>
+          <% end %>
+        </div>
+
+
+        <div class="topbar-right">
+          <ul class="topbar-nav nav">
+            <li class="nav-item"><%= link_to "Submit your Startup", "#", class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Get the Book", "#", class: "nav-link" %></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- END Topbar -->
