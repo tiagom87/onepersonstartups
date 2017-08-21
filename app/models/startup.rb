@@ -22,6 +22,7 @@ class Startup < ApplicationRecord
 	belongs_to :category
 
 	validates :name, presence: true
+	validates :creator_name, presence: true
 	validates :hollywood, presence: true
 	validates :startup_url, presence: true
 	validates :revenue, presence: true
