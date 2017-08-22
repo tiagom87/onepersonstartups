@@ -62,4 +62,5 @@ gem 'activeadmin'
 gem 'cancan' 
 gem 'draper'
 gem 'pundit'
-
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'

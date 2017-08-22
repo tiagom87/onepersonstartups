@@ -20,11 +20,25 @@
       <%= render @startups %>
     </div>
     <!-- Startups End -->
-    
+
     <!-- Pagination Starts -->
     <nav class="flexbox mt-30">
-      <a class="btn btn-white disabled"><i class="ti-arrow-left fs-9 mr-4"></i> Previous</a>
-      <a class="btn btn-white" href="#">Next <i class="ti-arrow-right fs-9 ml-4"></i></a>
+
+
+
+      
+
+      <% if @startups.current_page > 1 %>
+        <%= link_to "<i class='ti-arrow-left fs-9 ml-4'></i> Previous".html_safe, "#{startups_path}?page=#{@startups.current_page-1}", class: "btn btn-white" %>
+      <% else %>
+       <%= link_to "<i class='ti-arrow-left fs-9 ml-4'></i> Previous".html_safe, "#", class: "btn btn-white disabled" %>
+      <% end %>
+   
+      <% if @startups.current_page < @startups.total_pages %>
+        <%= link_to "Next <i class='ti-arrow-right fs-9 ml-4'></i>".html_safe, "#{startups_path}?page=#{@startups.current_page+1}", class: "btn btn-white" %>
+        <% else %>
+        <%= link_to "Next <i class='ti-arrow-right fs-9 ml-4'></i>".html_safe, "#", class: "btn btn-white disabled" %>
+      <% end %>
     </nav>
     <!-- Pagination Ends -->
 
