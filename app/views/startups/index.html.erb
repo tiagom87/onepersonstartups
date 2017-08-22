@@ -1,4 +1,4 @@
-<header class="header fadeout header-inverse " style="background-image: linear-gradient(to bottom, #244947 0%, #51a4a0 100%);">
+<header class="header fadeout header-inverse " style="background-image: linear-gradient(to bottom, #243949 0%, #517fa4 100%);">
   <canvas class="constellation" width="1280" height="649"></canvas>
   <div class="container text-center">
 
@@ -18,16 +18,12 @@
     <!-- Startups Begin -->
     <div class="row gap-y">
       <%= render @startups %>
+      
     </div>
     <!-- Startups End -->
 
     <!-- Pagination Starts -->
     <nav class="flexbox mt-30">
-
-
-
-      
-
       <% if @startups.current_page > 1 %>
         <%= link_to "<i class='ti-arrow-left fs-9 ml-4'></i> Previous".html_safe, "#{startups_path}?page=#{@startups.current_page-1}", class: "btn btn-white" %>
       <% else %>
