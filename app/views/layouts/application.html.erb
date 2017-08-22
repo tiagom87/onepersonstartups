@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>One Person Startups</title>
+    <title><%= content_for?(:html_title) ? "#{content_for(:html_title)} | One Person Startups" : "One Person Startups" %></title>
+
+    <%= favicon_link_tag 'favicon.ico' %>
+    <meta name="description" content="<%= content_for?(:meta_description) ? content_for(:meta_description) : "An Honourable Directory of Amazing
+One Person Startups" %>">
+
+    <meta property="og:title" content="<%= content_for?(:og_title) ? content_for(:og_title) : 'One Person Status'%>" />
+    <meta property="og:type" content="<%= content_for?(:og_type) ? content_for(:og_type) : 'website'%>" />
+    <meta property="og:url" content="<%= request.url %>" />
+    <% image = asset_url 'one-person-startups-fb.png' %>
+    <meta property="og:image" content="<%= content_for?(:og_image) ? content_for(:og_image) : image %>" />
+    <meta property="og:image:secure_url" content="<%= content_for?(:og_image) ? content_for(:og_image) : image %>" />
+    <meta property='og:site_name' content='One Person Startups' />
+    <meta property='og:description' content="<%= content_for?(:og_description) ? content_for(:og_description) : 'An Honourable Directory of Amazing
+One Person Startups' %>" />
+  
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

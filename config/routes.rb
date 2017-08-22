@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :categories, only: [:index, :show]
-  resources :startups, only: [:index, :show, :new, :create]
+  resources :startups, only: [:index, :new, :create]
 
   get "thankyou/:guid", to: "startups#thankyou", as: "thankyou"
 
