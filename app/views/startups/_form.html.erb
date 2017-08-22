@@ -1,0 +1,28 @@
+<%= simple_form_for(@startup) do |f| %>
+<%= f.error_notification %>
+<div class="form-group">
+  <%= f.input :creator_name, placeholder: "Your Name", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.input :creator_email, placeholder: "Your Email", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.input :name, placeholder: "Your Startup's Name", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.input :hollywood, placeholder: "Your Hollywood Pitch", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.input :startup_url, placeholder: "Startup URL", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<div class="form-group">
+  <%= f.input :revenue, placeholder: "Average Monthly Revenue", input_html: {class: "form-control form-control-lg"}, required: true, label: false %>
+</div>
+
+<%= f.button :submit, class: "btn btn-block btn-lg btn-success" %>
+<% end %>

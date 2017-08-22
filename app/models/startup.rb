@@ -16,9 +16,12 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  category_id   :integer
+#  guid          :string
 #
 
 class Startup < ApplicationRecord
+	before_create :populate_guid
+	
 	belongs_to :category
 
 	validates :name, presence: true
@@ -26,8 +29,10 @@ class Startup < ApplicationRecord
 	validates :hollywood, presence: true
 	validates :startup_url, presence: true
 	validates :revenue, presence: true
-	validates :category_id, presence: true
-	validates :logo_url, presence: true
 
+  private
+  def populate_guid
+    self.guid = SecureRandom.uuid()
+  end
 
 end
