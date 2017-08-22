@@ -1,16 +1,8 @@
 ActiveAdmin.register Startup do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
+
 permit_params :name, :hollywood, :logo_url, :creator_name, :creator_email, :source_name, :source_url, :revenue, :startup_url, :state, :category_id
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+# Input Form Begins
 
 form do |f|
 	f.inputs do
@@ -28,6 +20,27 @@ form do |f|
 	end
 	f.actions
 end
+
+# Input Form Ends
+
+# Index Begins
+
+index do
+	selectable_column
+	column :id
+	column "Name" do |startup|
+		link_to startup.name, admin_startup_path(startup)
+	end
+	column :hollywood
+	column :creator_name
+	column :revenue
+	column :category
+	column :state
+	column :created_at
+	actions
+end
+
+# Index Ends
 
 end
 
