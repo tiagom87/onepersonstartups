@@ -23,6 +23,7 @@ form do |f|
 		f.input :source_url, label: "Source's URL"
 		f.input :revenue, label: "Average Monthly Revenue"
 		f.input :startup_url, label: "Startup's URL"
+		f.input :state, label: "State", as: :select, collection: ["pending","approved","denied"], include_blank: false
 		f.input :category_id, label: "Category", as: :select, collection: Category.all.map{|u| ["#{u.name}", u.id]}, include_blank: false
 	end
 	f.actions
