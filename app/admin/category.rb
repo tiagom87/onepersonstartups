@@ -28,7 +28,14 @@ index do
 		if category.startups.size > 0
 			category.startups.to_a.sum(&:revenue)
 		else
-			return 0
+			0
+		end
+	end
+	column "Average Revenue" do |category|
+		if category.startups.size > 0
+			category.startups.to_a.sum(&:revenue) / category.startups.size
+		else
+			0
 		end
 	end
 	column :created_at
