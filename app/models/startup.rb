@@ -27,4 +27,7 @@ class Startup < ApplicationRecord
 	validates :startup_url, presence: true
 	validates :revenue, presence: true
 	validates :category_id, presence: true
+	validates :logo_url, presence: true
+
+
 end
