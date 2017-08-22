@@ -1,6 +1,6 @@
 <div class="col-12 col-md-6 col-lg-4">
 	<div class="card card-hover-shadow">
-		<%= link_to startup.startup_url, target: "_blank" do %>
+		<%= link_to startup.startup_url + "?utm_source=onepersonstartups&utm_medium=referral", target: "_blank" do %>
 		<%= image_tag startup.logo_url, class: "card-img-top", alt: "#{startup.name}'s Logo" %>
 		<% end %>
 		<div class="card-block">
@@ -11,7 +11,7 @@
 				<b>Monthly Revenue:</b> $<%= number_with_delimiter(startup.revenue, :delimiter => ',') %><br>
 				<b>Category:</b> <%= startup.category.name %>
 			</p>
-			<%= link_to startup.startup_url, class: "fw-600 fs-12", target: "_blank" do %>
+			<%= link_to startup.startup_url + "?utm_source=onepersonstartups&utm_medium=referral", class: "fw-600 fs-12", target: "_blank" do %>
 			Know More <i class="fa fa-chevron-right fs-9 pl-8"></i>
 			<% end %>
 		</div>
