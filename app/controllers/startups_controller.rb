@@ -2,7 +2,7 @@ class StartupsController < ApplicationController
   before_action :set_startup, only: [:thankyou]
 	
   def index
-  	@startups = Startup.where(state: "approved").paginate(:page => params[:page], :per_page => 30)
+  	@startups = Startup.where(state: "approved").order('created_at DESC').paginate(:page => params[:page], :per_page => 30)
   end
 
   def new
