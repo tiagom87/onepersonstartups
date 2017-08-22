@@ -25,11 +25,8 @@ index do
 		category.startups.size
 	end
 	column "Total Revenue" do |category|
-		category.startups.to_a.sum(&:revenue)
-	end
-	column "Average Revenue" do |category|
-		unless category.startups.size < 1
-			category.startups.to_a.sum(&:revenue) / category.startups.size
+		if category.startups.size > 0
+			category.startups.to_a.sum(&:revenue)
 		else
 			return 0
 		end
